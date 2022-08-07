@@ -23,7 +23,7 @@ This is the unique identifier of your server in the network. It cannot be safely
 
 `WEB_DOMAIN` is an optional environment variable allowing to install Mastodon on one domain, while having the users' handles on a different domain, e.g. addressing users as `@alice@example.com` but accessing Mastodon on `mastodon.example.com`. This may be useful if your domain name is already used for a different website but you still want to use it as a Mastodon identifier because it looks better or shorter.
 
-As with `LOCAL_DOMAIN`, `WEB_DOMAIN` cannot be safely changed once set, as this will confuse remote servers that knew of your previous settings and may break communication with them or make it unreliable. As the issues lie with remote servers' understanding of your accounts, re-installing Mastodon from scratch will not fix the issue. Therefore, please be extremelly cautious when setting up `LOCAL_DOMAIN` and `WEB_DOMAIN`.
+As with `LOCAL_DOMAIN`, `WEB_DOMAIN` cannot be safely changed once set, as this will confuse remote servers that knew of your previous settings and may break communication with them or make it unreliable. As the issues lie with remote servers' understanding of your accounts, re-installing Mastodon from scratch will not fix the issue. Therefore, please be extremely cautious when setting up `LOCAL_DOMAIN` and `WEB_DOMAIN`.
 
 To install Mastodon on `mastodon.example.com` in such a way it can serve `@alice@example.com`, set `LOCAL_DOMAIN` to `example.com` and `WEB_DOMAIN` to `mastodon.example.com`. This also requires additional configuration on the server hosting `example.com` to redirect or proxy requests to `https://example.com/.well-known/webfinger` to `https://mastodon.example.com/.well-known/webfinger`. For instance, with nginx, the configuration could look like the following:
 
@@ -66,7 +66,7 @@ tootctl domain purge --limited-federation-mode
 ```
 
 {{< hint style="warning" >}}
-This mode is intended for private use only, such as in academic instituations or internal company networks, as it effectively creates a data silo, which is contrary to Mastodon's mission of decentralization.
+This mode is intended for private use only, such as in academic institutions or internal company networks, as it effectively creates a data silo, which is contrary to Mastodon's mission of decentralization.
 {{</ hint >}}
 
 {{< hint style="info" >}}
@@ -490,7 +490,7 @@ You must serve the files with CORS headers, otherwise some functions of Mastodon
 * `LDAP_UID`
 * `LDAP_SEARCH_FILTER`
 * `LDAP_MAIL`
-* `LDAP_UID_CONVERSTION_ENABLED`
+* `LDAP_UID_CONVERSION_ENABLED`
 
 ### PAM {#pam}
 
